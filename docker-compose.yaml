@@ -1,0 +1,10 @@
+version: '3.8'
+services:
+  rancher:
+    image: rancher/rancher:latest
+    restart: unless-stopped
+    ports:
+      - 80:80
+      - 443:443
+    environment:
+      ACME_DOMAIN: rancher.example.com
